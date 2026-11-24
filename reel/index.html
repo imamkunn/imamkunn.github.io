@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Imamkunn Editing Reel</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Fira+Sans:wght@400;600;800;900&display=swap" rel="stylesheet">
+<style>
+/* VOICE everyday work sample: confident, quick to scan, like opening an editor's reel
+   IDEA the edit itself: a cream grid board with phone frames, yellow caption highlights, a red CLIP pill
+   PICTURE six playable phones in a row, the reel is the hero
+   COLOUR grid cream ground, ink, caption yellow #ffd200, clip red #e8463a; night = deep ink with the same accents
+   TYPE Anton display (the caption face) + Fira Sans text
+   LAYOUT laptop: title band with facts on the right, full-width phone row beneath; phone: title, swipe row, notes */
+:root{color-scheme:light dark;--bg:light-dark(#f4f1ea,#121214);--grid:light-dark(#e2dccf,#1f1f23);--grid2:light-dark(#d4ccbc,#2a2a30);--ink:light-dark(#161618,#f3f1ec);--soft:light-dark(#5f5a50,#b4aea2);--card:light-dark(#ffffff,#1b1b1f);--line:light-dark(#e3ddd0,#2c2c31);--yel:#ffd200;--red:#e8463a}
+:root[data-theme=light]{color-scheme:light}:root[data-theme=dark]{color-scheme:dark}
+*{box-sizing:border-box;min-width:0}
+html,body{margin:0}
+body{background-color:var(--bg);background-image:linear-gradient(var(--grid2) 2px,transparent 2px),linear-gradient(90deg,var(--grid2) 2px,transparent 2px),linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:240px 240px,240px 240px,40px 40px,40px 40px;color:var(--ink);font:16px/1.55 "Fira Sans",system-ui,sans-serif;overflow-x:clip}
+.band{padding-block:clamp(28px,4vw,56px);padding-left:max(5vw,16px,env(safe-area-inset-left,0px));padding-right:max(5vw,16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1240px;margin:0 auto}
+.top{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:28px 48px;align-items:end}
+.pill{display:inline-flex;align-items:center;gap:8px;background:var(--red);color:#fff;font-weight:900;font-size:15px;padding:6px 14px;border-radius:99px}
+.pill i{width:9px;height:9px;border-radius:50%;background:#fff;animation:blink 1.2s steps(2) infinite}
+@keyframes blink{50%{opacity:.25}}
+h1{font-family:Anton,Impact,sans-serif;font-weight:400;font-size:clamp(40px,6vw,72px);line-height:1.02;letter-spacing:-.01em;margin:14px 0 10px;text-wrap:balance}
+h1 mark{background:var(--yel);color:#161618;padding:0 .12em;border-radius:8px}
+.lede{font-size:18px;max-width:34em;margin:0;color:var(--ink)}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(10em,1fr));gap:10px}
+.fact{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:12px 16px}
+.fact b{display:block;font-family:Anton,Impact,sans-serif;font-weight:400;font-size:26px;line-height:1.1;white-space:nowrap}
+.fact span{font-size:14px;color:var(--soft)}
+.reel{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;padding:6px 4px 18px;scrollbar-width:thin}
+.item{flex:0 0 clamp(220px,22vw,270px);scroll-snap-align:start}
+.phone{position:relative;aspect-ratio:9/16;border-radius:30px;padding:8px;background:#0d0d0f;box-shadow:0 18px 34px -18px rgba(40,30,10,.55)}
+.phone video{display:block;width:100%;height:100%;object-fit:cover;border-radius:23px;background:#222}
+.num{position:absolute;top:18px;left:18px;font-family:Anton,Impact,sans-serif;font-size:20px;background:var(--yel);color:#161618;border-radius:10px;padding:0 9px;pointer-events:none}
+.item h3{font-family:Anton,Impact,sans-serif;font-weight:400;font-size:24px;line-height:1.1;margin:14px 0 4px}
+.tag{display:inline-block;font-size:13px;font-weight:800;border-radius:99px;padding:2px 10px;margin-bottom:6px;background:var(--ink);color:var(--bg)}
+.tag.pod{background:var(--red);color:#fff}
+.item p{margin:0;font-size:15px;color:var(--soft)}
+.nav{display:flex;gap:10px;justify-content:flex-end;margin-top:4px}
+.nav button{width:44px;height:44px;border-radius:50%;border:2px solid var(--ink);background:var(--card);color:var(--ink);font:900 20px "Fira Sans",sans-serif;cursor:pointer}
+.nav button:hover{background:var(--yel);color:#161618;border-color:#161618}
+.nav button:focus-visible,.phone video:focus-visible{outline:3px solid var(--red);outline-offset:3px}
+.how{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.step{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px}
+.step h4{margin:0 0 6px;font-size:18px;font-weight:900}
+.step h4 span{background:var(--yel);color:#161618;padding:0 6px;border-radius:6px}
+.step p{margin:0;font-size:15px;color:var(--soft)}
+h2{font-family:Anton,Impact,sans-serif;font-weight:400;font-size:clamp(30px,4vw,40px);line-height:1.05;margin:0 0 16px}
+.foot{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:start}
+.small{font-size:14px;color:var(--soft);margin:0}
+.small a{color:inherit}
+.cta{background:var(--ink);color:var(--bg);border-radius:22px;padding:22px 24px}
+.cta b{font-family:Anton,Impact,sans-serif;font-weight:400;font-size:28px;display:block;line-height:1.1;margin-bottom:6px}
+@media(max-width:900px){.how{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.top,.foot{grid-template-columns:minmax(0,1fr)}.nav{display:none}}
+@media(max-width:460px){.how{grid-template-columns:minmax(0,1fr)}.item{flex-basis:72vw}}
+@media(prefers-reduced-motion:reduce){.pill i{animation:none}}
+</style>
+</head>
+<body>
+<header class="band">
+  <div class="wrap top">
+    <div>
+      <span class="pill"><i></i>Editing reel</span>
+      <h1>Short-form edits that <mark>hook</mark> in the first second</h1>
+      <p class="lede">I'm Imamkunn, a short-form video editor in Jakarta. I turn podcasts, interviews and talking-head footage into vertical clips with tight pacing, word-by-word captions, typography and motion graphics.</p>
+    </div>
+    <div class="facts">
+      <div class="fact"><b>9:16</b><span>Shorts, Reels, TikTok</span></div>
+      <div class="fact"><b>GMT+7</b><span>Overlaps SGT &amp; AU hours</span></div>
+      <div class="fact"><b>Hours</b><span>Turnaround on daily clips</span></div>
+      <div class="fact"><b>-14 LUFS</b><span>Mixed for mobile platforms</span></div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="band" style="padding-top:0">
+    <div class="wrap">
+      <div class="reel" id="reel"></div>
+      <div class="nav"><button id="prev" aria-label="Previous clip">&#8592;</button><button id="next" aria-label="Next clip">&#8594;</button></div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <h2>How each clip is built</h2>
+      <div class="how">
+        <div class="step"><h4><span>Hook</span> first</h4><p>The strongest line goes in second one, even when it comes from the end of the conversation.</p></div>
+        <div class="step"><h4><span>Pacing</span></h4><p>Pauses and filler are cut, with alternating punch-ins so jump cuts feel deliberate.</p></div>
+        <div class="step"><h4><span>Captions</span></h4><p>Word-by-word, two styles only: clean white, with key words in bold yellow. Kept inside the safe zone.</p></div>
+        <div class="step"><h4><span>Graphics</span> &amp; sound</h4><p>Typography cards, keyword stickers and UI motion graphics, plus denoised dialogue, music and SFX on every beat.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="band">
+    <div class="wrap foot">
+      <div class="cta"><b>Available within 7 days</b>Part-time daily clips or per-video projects. Contact details are in my application.</div>
+      <div>
+        <p class="small">Clips 01–03 and 06 are edited from &ldquo;Ward Cunningham, Inventor of the Wiki&rdquo; by Vgrigas, Wikimedia Commons, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>. Changes: cut, reframed to 9:16, captions, typography, motion graphics, music and sound added. These edits are shared under the same license. <a href="https://commons.wikimedia.org/wiki/File:Ward_Cunningham,_Inventor_of_the_Wiki.webm">Source</a>.</p>
+        <p class="small" style="margin-top:10px">Clips 04–05 use my own on-camera footage. Figures in 05: BRIN (2026), via The Jakarta Post.</p>
+      </div>
+    </div>
+  </footer>
+</main>
+
+<script>
+{
+  const clips = [
+    {f:"01-could-have-done-it", t:"You could have done it yourself", k:"Podcast clip", pod:true, d:"Cold-open hook, keyword stickers, email and editor UI animations."},
+    {f:"02-words-are-a-gift", t:"Your words are a gift", k:"Podcast clip", pod:true, d:"Kinetic typography with an animated gift box and an overnight-edit document."},
+    {f:"03-every-person", t:"Every person is important", k:"Podcast clip", pod:true, d:"Language chips, a globe and a dove carry the idea of one world of ideas."},
+    {f:"04-stop-explaining", t:"Stop explaining", k:"Talking head", pod:false, d:"Hook advice cut tight, with feed, timeline and retention-chart graphics."},
+    {f:"05-jakarta-sinking", t:"Jakarta is sinking", k:"Explainer", pod:false, d:"Face-to-camera plus animated data, a cross-section diagram and a map."},
+    {f:"06-where-wiki-came-from", t:"Where “wiki” came from", k:"Interview + B-roll", pod:false, d:"Audio-led story built from archive B-roll and designed cards."}
+  ];
+  const reel = document.getElementById("reel");
+  reel.innerHTML = clips.map((c, i) =>
+    `<article class="item"><div class="phone"><video id="vid-${i}" src="v/${c.f}.mp4" poster="p/${c.f}.jpg" controls playsinline preload="none"></video><span class="num">${String(i + 1).padStart(2, "0")}</span></div>` +
+    `<h3>${c.t}</h3><span class="tag${c.pod ? " pod" : ""}">${c.k}</span><p>${c.d}</p></article>`).join("");
+  const vids = [...reel.querySelectorAll("video")];
+  vids.forEach(v => v.addEventListener("play", () => vids.forEach(o => { if (o !== v) o.pause(); })));
+  const step = dir => { const it = reel.querySelector(".item"); const w = it ? it.getBoundingClientRect().width + 22 : 280; reel.scrollBy({left: dir * w, behavior: "smooth"}); };
+  document.getElementById("prev").addEventListener("click", () => step(-1));
+  document.getElementById("next").addEventListener("click", () => step(1));
+  reel.tabIndex = 0;
+  reel.addEventListener("keydown", e => { if (e.key === "ArrowRight") step(1); if (e.key === "ArrowLeft") step(-1); });
+}
+</script>
+</body>
+</html>
