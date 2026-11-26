@@ -68,7 +68,7 @@ h2{font-family:Anton,Impact,sans-serif;font-weight:400;font-size:clamp(30px,4vw,
     <div>
       <span class="pill"><i></i>Editing reel</span>
       <h1>Short-form edits that <mark>hook</mark> in the first second</h1>
-      <p class="lede">I'm Imamkunn, a short-form video editor in Jakarta. I turn podcasts, interviews and talking-head footage into vertical clips with tight pacing, word-by-word captions, typography and motion graphics.</p>
+      <p class="lede">I'm Imamkunn, a short-form video editor in Jakarta. I turn face-cam, podcast and interview footage into vertical clips with tight pacing, word-by-word captions, typography and motion graphics. Clips 01–07 are my Indonesian-language explainer series for TikTok and Reels.</p>
     </div>
     <div class="facts">
       <div class="fact"><b>9:16</b><span>Shorts, Reels, TikTok</span></div>
@@ -103,8 +103,8 @@ h2{font-family:Anton,Impact,sans-serif;font-weight:400;font-size:clamp(30px,4vw,
     <div class="wrap foot">
       <div class="cta"><b>Available within 7 days</b>Part-time daily clips or per-video projects. Contact details are in my application.</div>
       <div>
-        <p class="small">Clips 01–03 and 06 are edited from &ldquo;Ward Cunningham, Inventor of the Wiki&rdquo; by Vgrigas, Wikimedia Commons, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>. Changes: cut, reframed to 9:16, captions, typography, motion graphics, music and sound added. These edits are shared under the same license. <a href="https://commons.wikimedia.org/wiki/File:Ward_Cunningham,_Inventor_of_the_Wiki.webm">Source</a>.</p>
-        <p class="small" style="margin-top:10px">Clips 04–05 use my own on-camera footage. Figures in 05: BRIN (2026), via The Jakarta Post.</p>
+        <p class="small" style="margin-bottom:10px">Clips 01–09 use my own on-camera footage. Archive photos, maps and data in 01–07 are credited on screen; figures in 09: BRIN (2026), via The Jakarta Post.</p>
+        <p class="small">Clips 10–11 are edited from &ldquo;Ward Cunningham, Inventor of the Wiki&rdquo; by Vgrigas, Wikimedia Commons, <a href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a>. Changes: cut, reframed to 9:16, captions, typography, motion graphics, music and sound added. These edits are shared under the same license. <a href="https://commons.wikimedia.org/wiki/File:Ward_Cunningham,_Inventor_of_the_Wiki.webm">Source</a>.</p>
       </div>
     </div>
   </footer>
@@ -113,11 +113,16 @@ h2{font-family:Anton,Impact,sans-serif;font-weight:400;font-size:clamp(30px,4vw,
 <script>
 {
   const clips = [
-    {f:"01-could-have-done-it", t:"You could have done it yourself", k:"Podcast clip", pod:true, d:"Cold-open hook, keyword stickers, email and editor UI animations."},
-    {f:"02-words-are-a-gift", t:"Your words are a gift", k:"Podcast clip", pod:true, d:"Kinetic typography with an animated gift box and an overnight-edit document."},
-    {f:"03-every-person", t:"Every person is important", k:"Podcast clip", pod:true, d:"Language chips, a globe and a dove carry the idea of one world of ideas."},
+    {f:"10-hitler-mati-di-garut", t:"Hitler mati di Garut?", k:"Face-cam explainer · Indonesian", pod:false, d:"Opens on a viewer comment, then archive photos, a dossier card, a journal page and an animated map to Berlin."},
+    {f:"09-siapa-pribumi-asli-indonesia", t:"Siapa pribumi asli Indonesia?", k:"Face-cam explainer · Indonesian", pod:false, d:"150,000 years in 60 seconds: ice-age sea levels, cave art, migration routes and an 1854 law, each beat a new graphic."},
+    {f:"07-seberapa-luas-alam-semesta", t:"Seberapa luas alam semesta?", k:"Face-cam explainer · Indonesian", pod:false, d:"Scale explained with counters, light-time timelines and Hubble deep-field zooms."},
+    {f:"12-salam-3-jari", t:"Asal salam 3 jari", k:"Face-cam explainer · Indonesian", pod:false, d:"One gesture across 1908, 2008 and today: hand match cuts, photo cards, a book page and a timeline."},
+    {f:"11-lubang-tembus-bumi-jakarta", t:"Lubang tembus bumi dari Jakarta", k:"Face-cam explainer · Indonesian", pod:false, d:"A map zoom into an animated Earth cross-section with depth, temperature and speed readouts."},
+    {f:"08-kenapa-langit-malam-gelap", t:"Kenapa langit malam gelap?", k:"Face-cam explainer · Indonesian", pod:false, d:"Olbers' paradox made visual: expanding-universe diagram, redshift wave and an old-TV static payoff."},
+    {f:"13-kucing-oren", t:"Kenapa kucing oren kebanyakan jantan?", k:"Face-cam explainer · Indonesian", pod:false, d:"Genetics on a blueprint grid: DNA strands, a cell diagram and an animated 80% cat counter."},
     {f:"04-stop-explaining", t:"Stop explaining", k:"Talking head", pod:false, d:"Hook advice cut tight, with feed, timeline and retention-chart graphics."},
     {f:"05-jakarta-sinking", t:"Jakarta is sinking", k:"Explainer", pod:false, d:"Face-to-camera plus animated data, a cross-section diagram and a map."},
+    {f:"01-could-have-done-it", t:"You could have done it yourself", k:"Podcast clip", pod:true, d:"Cold-open hook, keyword stickers, email and editor UI animations."},
     {f:"06-where-wiki-came-from", t:"Where “wiki” came from", k:"Interview + B-roll", pod:false, d:"Audio-led story built from archive B-roll and designed cards."}
   ];
   const reel = document.getElementById("reel");
