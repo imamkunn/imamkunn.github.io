@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Imamkunn Editing Reel</title>
+<title>Imamkunn: AI Film &amp; Short-form Editing Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anton&family=Fira+Sans:wght@400;600;800;900&display=swap" rel="stylesheet">
@@ -56,6 +56,17 @@ h2{font-family:Anton,Impact,sans-serif;font-weight:400;font-size:clamp(30px,4vw,
 .small a{color:inherit}
 .cta{background:var(--ink);color:var(--bg);border-radius:22px;padding:22px 24px}
 .cta b{font-family:Anton,Impact,sans-serif;font-weight:400;font-size:28px;display:block;line-height:1.1;margin-bottom:6px}
+.films{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px}
+.film{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:10px 10px 18px}
+.film video{display:block;width:100%;aspect-ratio:16/9;border-radius:14px;background:#000}
+.film .in{padding:0 8px}
+.film h3{font-family:Anton,Impact,sans-serif;font-weight:400;font-size:28px;letter-spacing:.02em;margin:14px 0 4px}
+.film p{margin:6px 0 0;font-size:15px;color:var(--soft)}
+.film p b{color:var(--ink)}
+.flow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-top:22px}
+.sub{font-size:17px;color:var(--soft);margin:-6px 0 20px;max-width:44em}
+@media(max-width:900px){.films{grid-template-columns:minmax(0,1fr)}.flow{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:460px){.flow{grid-template-columns:minmax(0,1fr)}}
 @media(max-width:900px){.how{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:700px){.top,.foot{grid-template-columns:minmax(0,1fr)}.nav{display:none}}
 @media(max-width:460px){.how{grid-template-columns:minmax(0,1fr)}.item{flex-basis:72vw}}
@@ -66,12 +77,12 @@ h2{font-family:Anton,Impact,sans-serif;font-weight:400;font-size:clamp(30px,4vw,
 <header class="band">
   <div class="wrap top">
     <div>
-      <span class="pill"><i></i>Editing reel</span>
-      <h1>Short-form edits that <mark>hook</mark> in the first second</h1>
-      <p class="lede">I'm Imamkunn, a short-form video editor in Jakarta. I turn face-cam, podcast and interview footage into vertical clips with tight pacing, word-by-word captions, typography and motion graphics. Clips 01–07 are my Indonesian-language explainer series for TikTok and Reels.</p>
+      <span class="pill"><i></i>Portfolio</span>
+      <h1>Cinematic <mark>AI films</mark> and short-form edits that hook</h1>
+      <p class="lede">I'm Imamkunn, a video editor in Jakarta working in two formats: cinematic AI short films, built shot by shot from script to final grade, and short-form vertical clips with tight pacing, word-by-word captions, typography and motion graphics.</p>
     </div>
     <div class="facts">
-      <div class="fact"><b>9:16</b><span>Shorts, Reels, TikTok</span></div>
+      <div class="fact"><b>16:9 + 9:16</b><span>Films, Shorts, Reels, TikTok</span></div>
       <div class="fact"><b>GMT+7</b><span>Overlaps SGT &amp; AU hours</span></div>
       <div class="fact"><b>Hours</b><span>Turnaround on daily clips</span></div>
       <div class="fact"><b>-14 LUFS</b><span>Mixed for mobile platforms</span></div>
@@ -80,8 +91,27 @@ h2{font-family:Anton,Impact,sans-serif;font-weight:400;font-size:clamp(30px,4vw,
 </header>
 
 <main>
+  <section class="band" style="padding-top:0" id="films">
+    <div class="wrap">
+      <h2>Cinematic AI short films</h2>
+      <p class="sub">Written, storyboarded and produced shot by shot with AI: continuity-locked frames, lip-synced voices, sound design, original score and a film grade. Turn the sound on.</p>
+      <div class="films">
+        <article class="film"><video controls playsinline preload="metadata" poster="../film/v/twelve-paces.jpg" src="../film/v/twelve-paces.mp4"></video><div class="in"><h3>TWELVE PACES</h3><span class="tag">Western · 66 s · dialogue</span><p>High noon, two gunslingers twelve paces apart, waiting for the clock tower bell.</p><p><b>Watch for:</b> a silent standoff on master and over-the-shoulder coverage that keeps the 180° line, one clock tower consistent across every angle, lip-synced dialogue, and a score that cuts dead at the gunshot.</p></div></article>
+        <article class="film"><video controls playsinline preload="metadata" poster="../film/v/last-light.jpg" src="../film/v/last-light.mp4"></video><div class="in"><h3>LAST LIGHT</h3><span class="tag">Sci-fi · 55 s · dialogue</span><p>The last astronaut aboard Station Nusantara radios Earth, hoping someone is still listening.</p><p><b>Watch for:</b> one consistent character across interiors and exteriors, practical-looking cockpit light and quiet sound design carrying the isolation.</p></div></article>
+      </div>
+      <div class="flow">
+        <div class="step"><h4><span>Script</span> &amp; shots</h4><p>Story, dialogue and a shot list with a target length per shot, so generation only goes where the edit needs it.</p></div>
+        <div class="step"><h4><span>Previz</span></h4><p>A quick 3D blocking pass in Blender locks positions, camera side, eyelines and the 180° line.</p></div>
+        <div class="step"><h4><span>Frames</span> &amp; video</h4><p>Reference sheets, one continuity-checked first frame per shot (Nano Banana Pro), then image-to-video in Google Flow (Veo 3.1). Every clip is checked frame by frame and regenerated if anything breaks.</p></div>
+        <div class="step"><h4><span>Sound</span> &amp; grade</h4><p>ElevenLabs voices converted from the on-screen performance for lip-sync, generated foley and score, then a film grade (halation, grain, muted palette), 2.39 letterbox and −16 LUFS.</p></div>
+      </div>
+    </div>
+  </section>
+
   <section class="band" style="padding-top:0">
     <div class="wrap">
+      <h2>Short-form edits</h2>
+      <p class="sub">Vertical clips for TikTok, Reels and Shorts. The first seven are my Indonesian-language explainer series.</p>
       <div class="reel" id="reel"></div>
       <div class="nav"><button id="prev" aria-label="Previous clip">&#8592;</button><button id="next" aria-label="Next clip">&#8594;</button></div>
     </div>
@@ -89,7 +119,7 @@ h2{font-family:Anton,Impact,sans-serif;font-weight:400;font-size:clamp(30px,4vw,
 
   <section class="band">
     <div class="wrap">
-      <h2>How each clip is built</h2>
+      <h2>How each short-form clip is built</h2>
       <div class="how">
         <div class="step"><h4><span>Hook</span> first</h4><p>The strongest line goes in second one, even when it comes from the end of the conversation.</p></div>
         <div class="step"><h4><span>Pacing</span></h4><p>Pauses and filler are cut, with alternating punch-ins so jump cuts feel deliberate.</p></div>
